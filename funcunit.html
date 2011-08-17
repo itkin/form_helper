@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../funcunit/qunit/qunit.css" />
+        <title>form_helper FuncUnit Test</title>
+    		<script type='text/javascript' src='../steal/steal.js?form_helper/form_helper_test.js'></script>
+    </head>
+    <body>
+        <h1 id="qunit-header">form_helper Test Suite</h1>
+        <h2 id="qunit-banner"></h2>
+        <div id="qunit-testrunner-toolbar"></div>
+        <h2 id="qunit-userAgent"></h2>
+        <ol id="qunit-tests"></ol>
+        <div id="qunit-test-area"></div>
+
+        <script type='text/ejs' id='form'>
+          <form>
+            <%= text_field(blog, 'title') %>
+            <%= text_field(blog, 'title',{name: "testName", id: 'testID'}) %>
+            <%= password_field(blog, 'password') %>
+            <%= hidden_field(blog, 'status') %>
+            <%= text_area(blog, 'lead') %>
+
+            <%= text_field(blog, 'title2',{value: 'testValue', class: 'test_optional_default_value'}) %>
+            <%= text_field(blog, 'title3',{value: 'testValue', class: 'test_optional_default_value'}) %>
+            <%= text_field(blog, 'title4',{value: 'testValue', class: 'test_optional_default_value'}) %>
+
+            <%= text_field(blog, 'title', {value: 'testValue', class:'test_optional_default_value_2'}) %>
+
+            <%= check_box(blog,'is_published', {value: 121})%>
+            <%= check_box(blog,'is_published3', {value: 122})%>
+
+            <%= check_box(blog,'is_published2', {value: 121, class: 'multiple', multiple: true, checked: true})%>
+            <%= check_box(blog,'is_published2', {value: 122, class: 'multiple', multiple: true, checked: true})%>
+
+            <%= select(blog, 'io', ['a','b']) %>
+            <%= select(blog, 'io', ['a','b'], {multiple: true, value: 'b'}) %>
+          </form>
+
+        </script>
+    </body>
+
+</html>
