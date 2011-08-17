@@ -1,6 +1,7 @@
 # FormHelper
 
 FormBuilder aims to port ruby on rails like form helper methods to JSMC
+
 Have a look at [form_builder](https://github.com/itkin/form_builder) which adds some rails like form builder methods
 
 Basically given a model like that:
